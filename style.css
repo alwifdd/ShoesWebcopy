@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .logo img {
+  margin-left: 20px;
+  width: 100px;
+  filter: drop-shadow(2px 2px 2px white);
+}
+
+.container .links a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  margin: 0 20px;
+  transition: 0.3s linear;
+}
+
+.container .links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  background-color: #3b82f6;
+  height: 3.5px;
+  transition: 0.3s linear;
+}
+
+.container .links a:hover::before,
+.container .links a:hover {
+  color: #3b82f6;
+  width: 100%;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.container .search i {
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.container .login-btn a {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.container .login-btn a:hover {
+  background-color: #1d4ed8;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+  padding-top: 10vh;
+}
+
+section .content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content .main-content {
+  color: black;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-content h1 {
+  font-size: clamp(2rem, 1rem + 5vw, 4rem);
+}
+
+.main-content h2 {
+  color: #3b82f6;
+  font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+}
+
+.main-content p {
+  margin-top: 10;
+  margin-bottom: 20px;
+  color: #635e5c;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.order h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin: 0;
+}
+
+.order-btn button {
+  width: auto;
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #3b82f6 40%, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-btn button:hover {
+  box-shadow: 0 0 15px #3b82f6;
+  background: linear-gradient(to bottom right, #1d4ed8, #3b82f6 40%);
+}
+
+.content .image img {
+  min-width: 350px;
+  width: 100%;
+  margin-right: 100px;
+  transform: rotate(40deg);
+  filter: drop-shadow(-10px -10px 200px #3b82f6);
+}
+
+@media (max-width: 800px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main-content {
+    margin: 0 10px;
+  }
+}
+
+.products {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #ffffff, #eaeaea);
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.product-item:nth-child(1) {
+  background-color: #f7e4a9d9;
+}
+
+.product-item:nth-child(2) {
+  background-color: #f9d3b4;
+}
+
+.product-item:nth-child(3) {
+  background-color: #b3e0d1;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #73b7fbe7;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-item p {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Untuk container utama detail produk */
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Untuk gambar produk */
+.product-detail img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Informasi produk */
+.product-info {
+  max-width: 600px;
+  width: 100%;
+  color: #333;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.product-info span {
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+/* Formulir tambahkan ke keranjang */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+form select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #3b82f6, #1d4ed8);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(to right, #1d4ed8, #3b82f6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 884px) {
+  .content .image img {
+    min-width: 500px;
+  }
+}
